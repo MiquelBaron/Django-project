@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayuda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4 text-center">Página de Ayuda</h1>
+        <div class="card mb-3">
+            <div class="card-header bg-primary text-white">
+                <h2 class="h5">¿Cómo agregar una tarea?</h2>
+            </div>
+            <div class="card-body">
+                <p>Para agregar una tarea nueva, completa el formulario en la página principal escribiendo el título y la descripción. Luego haz clic en el botón <strong>"Agregar Tarea"</strong>.</p>
+                <p class="text-muted">Nota: Asegúrate de que el título no esté vacío.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header bg-success text-white">
+                <h2 class="h5">¿Cómo marcar una tarea como completada?</h2>
+            </div>
+            <div class="card-body">
+                <p>Para marcar una tarea como completada, haz clic en la casilla de verificación (<input type="checkbox" checked disabled>) junto a la tarea en la lista de tareas incompletas. Esto moverá la tarea a la lista de tareas completadas.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header bg-warning text-white">
+                <h2 class="h5">¿Cómo editar una tarea?</h2>
+            </div>
+            <div class="card-body">
+                <p>Para editar una tarea, haz clic en el icono de lápiz (<i class="bi bi-pen"></i>) junto a la tarea. Esto te llevará a un formulario donde podrás modificar los detalles de la tarea.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header bg-danger text-white">
+                <h2 class="h5">¿Cómo eliminar una tarea?</h2>
+            </div>
+            <div class="card-body">
+                <p>Para eliminar una tarea, haz clic en el icono de basura (<i class="bi bi-trash"></i>) junto a la tarea. Recuerda que esta acción es irreversible.</p>
+            </div>
+        </div>
+        <div class="card mb-3">
+            <div class="card-header bg-secondary text-white">
+                <h2 class="h5">¿Cómo eliminar todas las tareas?</h2>
+            </div>
+            <div class="card-body">
+                <p>Para eliminar todas las tareas, haz clic en el botón <strong>"Eliminar Todas las Tareas"</strong> que se encuentra en la parte superior de la página principal.</p>
+            </div>
+        </div>
+        <div class="text-center mt-4 mb-3">
+            <a href="{% url 'crud:crud_list' %}" class="btn btn-primary">
+                <i class="bi bi-arrow-left-circle"></i> Volver a la Página Principal
+            </a>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
