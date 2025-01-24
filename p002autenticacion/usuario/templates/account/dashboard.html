@@ -1,13 +1,8 @@
 {% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
 
-{% block title %} Dashboard {% endblock %}
-
-{% block content %}
+{% block content%}
     <h1>Dashboard</h1>
-    <p>Bienvenido, {{ user.username }} 
-        <form action="{% url 'logout' %}" method="POST">
-        {% csrf_token %}
-        <button type="submit">Cerrar sesión</button>
-    </form>
-    </p>
+    <p>
+        Bienvenido a tu dashboard. {{ request.user.first_name|default:request.user.username }}
 {% endblock %}
