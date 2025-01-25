@@ -18,11 +18,14 @@
           <li class="nav-item">
             <a class="nav-link {% if section == 'dashboard' %}active{% endif %}" aria-current="page" href="{% url 'dashboard' %}">Mi Dashboard</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link {% if section == 'images' %}active{% endif %}" href="#">Menu 1</a>
+          <li>
+            <a class="nav-link {% if section == 'cat_fact' %}active{% endif %}" href="{% url 'cat_fact' %}">Dato curioso de gatos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link {% if section == 'people' %}active{% endif %}" href="#">Menu 2</a>
+            <a class="nav-link" href="{% url 'menu1' %}">Menu 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if section == 'people' %}active{% endif %}" href="{% url 'menu2' %}">Menu 2</a>
           </li>
 
           <li class="nav-item">

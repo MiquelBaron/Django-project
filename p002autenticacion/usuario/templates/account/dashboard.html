@@ -1,8 +1,36 @@
 {% extends "base.html" %}
 {% block title %}Dashboard{% endblock %}
 
-{% block content%}
-    <h1>Dashboard</h1>
-    <p>
-        Bienvenido a tu dashboard. {{ request.user.first_name|default:request.user.username }}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-header bg-primary text-white text-center">
+                    <h1 class="mb-0">Dashboard</h1>
+                </div>
+                <div class="card-body text-center">
+                    <p class="fs-5">
+                        Bienvenido a tu dashboard, 
+                        <strong>{{ request.user.first_name|default:request.user.username }}</strong>.
+                    </p>
+                    <p class="text-muted">
+                        Aquí puedes gestionar tu perfil y acceder a opciones personalizadas.
+                    </p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="{% url 'edit' %}" class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                            <i class="bi bi-pencil-square"></i> Editar Perfil
+                        </a>
+                        <a href="{% url 'password_change' %}" class="btn btn-outline-danger px-4 py-2 rounded-pill">
+                            <i class="bi bi-lock"></i> Cambiar Contraseña
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer text-center text-muted">
+                    © 2025 Tu Aplicación. Todos los derechos reservados.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

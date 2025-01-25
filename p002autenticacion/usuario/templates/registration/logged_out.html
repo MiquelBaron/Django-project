@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %} Cierre de sesion {% endblock %}
+{% block title %}Cierre de sesión{% endblock %}
 
 {% block content %}
-    <h1>Has cerrado sesión!</h1>
-    <p>Puedes volver a iniciar sesion. Esperamos verte pronto!</p>
-    <form action="{% url 'login' %}" method="POST">
-        {% csrf_token %}
-        <button type="submit">Iniciar sesion</button>
-    </form>
-
+    <div class="container text-center py-5">
+        <h1 class="display-4 mb-4">¡Has cerrado sesión!</h1>
+        <p class="lead">Puedes volver a iniciar sesión. ¡Esperamos verte pronto!</p>
+        
+        <!-- Formulario para iniciar sesión -->
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary btn-lg">Iniciar sesión</button>
+        </form>
+    </div>
 {% endblock %}
