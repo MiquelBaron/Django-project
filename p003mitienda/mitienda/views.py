@@ -4,9 +4,10 @@ from .models import Category, Products
 # Create your views here.
 
 def product_list(request, category_slug=None): #Si es none mostramos todos los productos
-    category = None
+
+    category = None #Inicialmente será None, si es el caso, se modificará en el if
     categories = Category.objects.all()
-    product = Products.objects.all(available=True)
+    products = Products.objects.filter(available=True)
 
     if category_slug:
         category = get_object_or_404(Category, slug=category_slug)
@@ -15,3 +16,10 @@ def product_list(request, category_slug=None): #Si es none mostramos todos los p
     return render(request, 'tienda/product/list.html', {'category':category,
                                                         'categories':categories,
                                                         'products':products})
+
+
+
+def product_detail(request, id, slug):
+    product = get_object_or_404(Products, id=id, slug=slug, available=True)
+
+    return render(request, 'tienda/product/detail.html', {'product':product})
